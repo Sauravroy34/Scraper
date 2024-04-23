@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 import requests
 import bs4
 import time
+import os
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=Options())
 
 
@@ -19,6 +20,8 @@ no_of_times = int(input("enter a number"))
 soup = bs4.BeautifulSoup(driver.page_source,"html.parser")
 x = 0
 j = 0
+os.makedirs("images",exist_ok=True)
+
 while x!= no_of_times:
 
 
